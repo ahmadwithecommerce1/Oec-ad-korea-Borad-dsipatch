@@ -1,0 +1,6 @@
+{
+  "name": "OEC Dispatch Admin Console",
+  "description": "Real-time dispatch management console for the OEC LED Board powered by Firebase Realtime Database.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

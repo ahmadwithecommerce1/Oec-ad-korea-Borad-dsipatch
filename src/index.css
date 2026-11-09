@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-mono-led {
+    font-family: 'JetBrains Mono', 'Chakra Petch', monospace;
+  }
+  .font-display {
+    font-family: 'Chakra Petch', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom scrollbar for dark tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111214;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272a30;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3f47;
+}
+
+/* LED glow animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 12 Scrolling Text Animation Styles */
+@keyframes marquee-scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes ticker-bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+}
+
+@keyframes ticker-fade {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@keyframes ticker-slide-left {
+  0% { transform: translateX(100%); opacity: 0; }
+  15%, 85% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes ticker-slide-right {
+  0% { transform: translateX(-100%); opacity: 0; }
+  15%, 85% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes ticker-zoom {
+  0%, 100% { transform: scale(0.92); opacity: 0.7; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+@keyframes ticker-flip {
+  0%, 100% { transform: perspective(400px) rotateX(0deg); opacity: 1; }
+  50% { transform: perspective(400px) rotateX(75deg); opacity: 0.3; }
+}
+
+@keyframes ticker-neon-pulse {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.55; }
+  30% { opacity: 1; }
+  65% { opacity: 0.8; }
+  85% { opacity: 1; }
+}
+
+@keyframes ticker-wave {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-4px); }
+  75% { transform: translateY(4px); }
+}
+
+@keyframes ticker-flash {
+  0%, 49.9% { opacity: 1; }
+  50%, 100% { opacity: 0.2; }
+}
+
+@keyframes ticker-slide-up {
+  0% { transform: translateY(100%); opacity: 0; }
+  20%, 80% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes ticker-typewriter {
+  0%, 100% { border-right-color: transparent; }
+  50% { border-right-color: currentColor; }
+}
